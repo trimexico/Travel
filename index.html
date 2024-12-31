@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/b60a41a3c0.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Travel</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand">Travel</a>
+      <div class="menu-mobile"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <video
+        src="./assets/videos/1.mp4"
+        class="video-slide active"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        src="./assets/videos/2.mp4"
+        class="video-slide"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        src="./assets/videos/3.mp4"
+        class="video-slide"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        src="./assets/videos/4.mp4"
+        class="video-slide"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        src="./assets/videos/5.mp4"
+        class="video-slide"
+        autoplay
+        muted
+        loop
+      ></video>
+
+      <div class="content">
+        <h1 class="">Wonderful.<br /><span>Island</span></h1>
+        <p>
+          An island or isle is a piece of subcontinental land completely
+          surrounded by water. Very small islands such as emergent land features
+          on atolls can be called islets, skerries, cays or keys. An island in a
+          river or a lake island may be called an eyot or ait, and a small
+          island off the coast may be called a holm. Sedimentary islands in the
+          Ganges Delta are called chars. A grouping of geographically or
+          geologically related islands, such as the Philippines, is referred to
+          as an archipelago.
+        </p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href=""><i class="fa-brands fa-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+    <script>
+      // const menuBtn = document.querySelector(".menu-mobile");
+
+      // menuBtn.addEventListener("click", () => {
+      //   menuBtn.classList.toggle("active");
+      // });
+
+      // slider
+      const btns = document.querySelectorAll(".nav-btn");
+      const videos = document.querySelectorAll(".video-slide");
+
+      var slideNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        videos.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        videos[manual].classList.add("active");
+      };
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          slideNav(i);
+        });
+      });
+    </script>
+  </body>
+</html>
